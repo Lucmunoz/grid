@@ -11,6 +11,8 @@ body{
 
 h2{
     font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 h3{
@@ -32,7 +34,7 @@ h3{
     border:solid 1px black
 }
 
-.header{
+.navbar{
     display:flex;
     flex-wrap:nowrap;
     flex-direction: row;
