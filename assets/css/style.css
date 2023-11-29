@@ -1,6 +1,11 @@
-body{
+*{
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
-    margin:0;
+}
+
+body{
+
     font-family: 'Roboto', sans-serif;
 }
 
@@ -10,13 +15,13 @@ h2{
 
 h3{
     font-weight: 500;
+    margin-bottom: 16px;
 }
 
 .main-grid-container{
     display: grid;
-    grid-template-columns: 250px auto auto;
-    height:100vh;
-    grid-template-rows: 45px auto 45px;
+    grid-template-columns: 150px auto auto;
+    grid-template-rows: 50px auto 45px;
     grid-template-areas:
     'header header header'
     'sidebar main main'
@@ -45,10 +50,12 @@ h3{
     background-color: #e7e7e7;
     display:flex;
     flex-direction: column;
+    padding: 16px;
 }
 .main{
     grid-area:main;
     background-color: #e7e7e7;
+    padding: 20px;
 }
 
 .footer{
@@ -57,13 +64,14 @@ h3{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height:100%;
     grid-area:footer
 }
 
 .sidebar a{
     text-decoration: none;
     color: black;
-    font-size: 1em;
+    font-size: 16px;
 }
 
 .parentesis{
@@ -71,11 +79,11 @@ h3{
 }
 
 .contenedor{
-    width: 90%;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    column-gap: 10px;
+    grid-template-columns: 3fr 3fr 3fr;
+    column-gap: 20px;
+    row-gap: 50px;
+    justify-content: space-between;
 }
 
 .card{
@@ -88,6 +96,7 @@ h3{
 
 .info-producto{
     width: 100%;
+    word-wrap:break-word;
     padding: 10px;
 }
 
@@ -95,15 +104,13 @@ h3{
     width: 100%;
 }
 
-
-
 .boton-compra{
     width: 100%;
 }
 
 .boton {
     width: 100%;
-    padding: 10px 20px;
+    padding: 15px 20px;
     background-color: #25527b;
     color: white;
     border: none;
