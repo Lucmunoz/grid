@@ -61,12 +61,9 @@ h3{
 }
 
 .footer{
-    display:flex;
-    flex-wrap:nowrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height:100%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
     grid-area:footer
 }
 
@@ -83,9 +80,7 @@ h3{
 .contenedor{
     display: grid;
     grid-template-columns: 3fr 3fr 3fr;
-    column-gap: 20px;
-    row-gap: 50px;
-    justify-content: space-between;
+    gap: 20px 30px
 }
 
 .card{
@@ -94,17 +89,26 @@ h3{
     flex-direction: column;
     align-items: center;
     background-color: white;
+
 }
 
 .info-producto{
-    width: 100%;
-    word-wrap:break-word;
+    display:flex;
+    flex-wrap:nowrap;
+    flex-direction: column;
+    flex-grow: 0;
     padding: 10px;
+
 }
 
 .info-producto img{
-    width: 100%;
+    max-height: 500px;
 }
+
+.imagen{
+    text-align: center;
+}
+
 
 .boton-compra{
     width: 100%;
