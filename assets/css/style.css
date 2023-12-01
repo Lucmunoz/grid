@@ -5,24 +5,23 @@
 }
 
 body{
-
     font-family: 'Roboto', sans-serif;
 }
 
 h2{
     font-weight: 500;
-    margin-top: 16px;
-    margin-bottom: 16px;
 }
+
 
 h3{
     font-weight: 500;
     margin-bottom: 16px;
 }
 
+/*CREACIÓN DE LAYOUT HACIENDO USO DE GRID TEMPLATE AREAS - PUNTO 1 DESAFÍO*/
 .main-grid-container{
     display: grid;
-    grid-template-columns: 150px auto auto;
+    grid-template-columns: 200px auto auto;
     grid-template-rows: 50px auto 45px;
     grid-template-areas:
     'header header header'
@@ -30,30 +29,37 @@ h3{
     'footer footer footer';
 }
 
-.box{
-    border:solid 1px black
-}
-
 .navbar{
-    display:flex;
-    flex-wrap:nowrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
     grid-area:header;
     background-color: #25527b;
     color:white; 
+    text-align: center;
+    height: 100%;
 }
 
+.navbar h2{
+    padding: 10px;
+}
+
+/*SE UTILIZA FLEX PARA CDISTRIBUCIÓN DE ELEMENTOS EN LA BARRA LATERAL - PUNTO 3*/
 .sidebar{
-    padding:10px;
-    grid-area:sidebar;
-    background-color: #e7e7e7;
     display:flex;
     flex-direction: column;
-    padding: 16px;
+    padding:16px;
+    grid-area:sidebar;
+    background-color: #e7e7e7;
 }
+
+.sidebar a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.parentesis{
+    color:gray;
+}
+
 .main{
     grid-area:main;
     background-color: #e7e7e7;
@@ -67,29 +73,25 @@ h3{
     grid-area:footer
 }
 
-.sidebar a{
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-}
-
-.parentesis{
-    color:gray;
-}
-
+/*CREACIÓN DE GRILLA DE PRODUCTOS HACIENDO USO DE CSS GRID - PUNTO 2*/
 .contenedor{
     display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
-    gap: 20px 30px
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+    grid-template-rows: minmax(0,1fr) minmax(0,1fr);
+    gap: 20px 30px;
+    width: 80%;
+    margin: 0 auto;
 }
 
+/*SE UTILIZA FLEX PARA CONSTRUCCIÓN DE TARJETAS DE PRODUCTOS - PUNTO 4*/
 .card{
     display:flex;
     flex-wrap:nowrap;
     flex-direction: column;
     align-items: center;
     background-color: white;
-
+    width: auto;
+    height: auto;
 }
 
 .info-producto{
@@ -98,17 +100,21 @@ h3{
     flex-direction: column;
     flex-grow: 0;
     padding: 10px;
-
-}
-
-.info-producto img{
-    max-height: 500px;
-}
-
-.imagen{
+    height: 100%;
     text-align: center;
 }
 
+.info-producto img{
+ width: 100%;
+}
+
+.precio{
+    margin-top:auto;
+}
+
+.descripcion{
+    word-break: break-word;
+}
 
 .boton-compra{
     width: 100%;
@@ -126,3 +132,9 @@ h3{
 .boton:hover {
     background-color: #577999;
   }
+
+
+
+    
+
+
